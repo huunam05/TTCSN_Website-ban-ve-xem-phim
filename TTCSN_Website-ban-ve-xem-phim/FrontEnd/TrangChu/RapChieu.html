@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMax - Rạp Chiếu</title>
+  <style>
+    body { background-color:#221f1f; color:#fff; font-family:'Segoe UI'; margin:0; }
+    header, footer { background-color:#000; padding:1rem 2rem; }
+    .container { max-width:1200px; margin:auto; padding:2rem; }
+    .section-title { font-size:2rem; border-bottom:2px solid #e50914; margin-bottom:1.5rem; }
+    .cinema-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+    .cinema-card { background-color:rgba(255,255,255,0.05); padding:1.5rem; border-radius:8px; }
+    .cinema-card h3 { color:#e50914; margin-bottom:0.5rem; }
+    .cinema-card p { margin-bottom:0.5rem; }
+    .cinema-card small { color:#aaa; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="TrangChu.html" style="color:#e50914;font-size:1.8rem;text-decoration:none;font-weight:bold;">Cine<span style="color:#fff;">Max</span></a>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">🎥 Hệ Thống Rạp CineMax</h2>
+    <div class="cinema-list">
+      <div class="cinema-card">
+        <h3>CineMax Quận 1</h3>
+        <p>Địa chỉ: 125 Nguyễn Huệ, Quận 1, TP.HCM</p>
+        <small>IMAX • 4DX • GOLD CLASS</small>
+      </div>
+      <div class="cinema-card">
+        <h3>CineMax Đà Nẵng </h3>
+        <p>Địa chỉ: Quận Hải Châu, Đà Nẵng </p>
+        <small>CINE & LIVING ROOM</small>
+      </div>
+      <div class="cinema-card">
+        <h3>CineMax Quận Bình Thạnh</h3>
+        <p>Địa chỉ: Quận Bình Thạnh, TP.HCM</p>
+        <small>STARIUM • DOLBY ATMOS</small>
+      </div>
+      <div class="cinema-card">
+        <h3>CineMax Quận 1</h3>
+        <p>Địa chỉ: 321 Điện Biên Phủ, Quận 1, TP.HCM </p>
+        <small>GALAXY STUDIO</small>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align:center;color:#757575;">
+    © 2025 CineMax. All rights reserved.
+  </footer>
+</body>
+</html>

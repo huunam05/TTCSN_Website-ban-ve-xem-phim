@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Mục Phim - CineMax</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #141414;
+      color: #fff;
+    }
+
+    header {
+      background-color: #000;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #e50914;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #e50914;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .movie-card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .movie-card h3 {
+      font-size: 20px;
+      margin: 15px 0 10px;
+    }
+
+    .movie-card button {
+      background-color: #e50914;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .movie-card button:hover {
+      background-color: #b0060f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CineMax</h1>
+    <nav>
+      <a href="TrangChu.html">Trang chủ</a>
+      <a href="Phim.html"> Phim</a>
+      <a href="RapChieu.html">Rạp Chiếu</a>
+      <a href="XemUuDai.html">Khuyến Mãi</a>
+      <a href="LienHe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Danh Mục Phim</h2>
+
+    <div class="movie-grid" id="movieGrid">
+    </div>
+  </div>
+
+  <script>
+    const movies = [
+      { title: "Avengers: Endgame", image: "https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" },
+      { title: "The Batman", image: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" },
+      { title: "Joker", image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" },
+      { title: "Dune: Part Two", image: "https://image.tmdb.org/t/p/w500/8bcoRX3hQRHufLPSDREdvr3YMXx.jpg" },
+      { title: "Frozen II", image: "https://image.tmdb.org/t/p/w500/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg" },
+      { title: "Fast & Furious 9", image: "https://image.tmdb.org/t/p/w500/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" }
+    ];
+
+    const grid = document.getElementById("movieGrid");
+
+    movies.forEach(movie => {
+      const card = document.createElement("div");
+      card.className = "movie-card";
+      card.innerHTML = `
+        <img src="${movie.image}" alt="${movie.title}">
+        <h3>${movie.title}</h3>
+        <button onclick="bookMovie('${movie.title}')">Đặt vé ngay</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    function bookMovie(title) {
+      alert("Bạn đã chọn đặt vé phim: " + title);
+      window.location.href = "DatVe.html";
+    }
+  </script>
+</body>
+</html>
